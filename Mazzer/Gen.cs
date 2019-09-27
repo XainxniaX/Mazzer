@@ -38,7 +38,7 @@ namespace Mazzer
         
         public Gen(int seed, Dictionary<StaticProbabilities, float> customProbs = null)
         {
-            Rng = new Random();
+            Rng = new Random(seed);
             if (customProbs == null) StaticProbs = DEFAULT_STATPROBS;
             else StaticProbs = customProbs;
             CellStack = new Stack<Cell>();            
